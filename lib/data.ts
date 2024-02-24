@@ -32,6 +32,7 @@ export const links = [
     name: "Contact",
     hash: "#contact",
   },
+  // we mention specifically this ^ strings as a path
 ] as const;
 
 export const experiencesData = [
