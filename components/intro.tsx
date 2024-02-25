@@ -3,10 +3,16 @@
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
+// React Icons
+import { BsArrowRight, BsLinkedin } from "react-icons/bs";
+import { HiDownload } from "react-icons/hi";
+import { FaGithubSquare } from "react-icons/fa";
+
 
 export default function Intro() {
   return (
-    <section>
+    <section className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]">
         <div className='flex items-center justify-center'>
             <div>
             <motion.div
@@ -28,23 +34,62 @@ export default function Intro() {
              </motion.div>
             </div>
         </div>
-            <motion.p
+            <motion.h1
+            className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
             initial={{opacity: 0, y: 100}}
             animate={{opacity: 1, y: 0}}
             transition={{
                 type: "spring",
                 duration: 0.3,
             }}
-            className="text-lg text-center mt-3"
             >
                 <span className="font-bold">Hello, I'm Damir.</span> I'm a{" "}
                 <span className="font-bold">full-stack developer</span> with expertise in 
                 <span className="font-bold"> React, Express, Node.js, and MongoDB. </span>
-                As a University of Toronto bootcamp graduate, 
-                I've polished my skills in crafting dynamic and efficient web applications.
-                I enjoy bringing ideas to life through web applications.
-            </motion.p>
+                As a <span className="underline">University of Toronto bootcamp graduate</span>, I've
+                polished my skills in crafting
+                <span className="italic"> dynamic and efficient </span>
+                web applications.
+                I enjoy bringing ideas to life.
+            </motion.h1>
+            {/* Buttons in desktop view will be in the same line */}
+            {/* If user will change the scale buttons will stack  */}
+            <motion.div 
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
+            initial={{opacity: 0, y: 100}}
+            animate={{opacity: 1, y: 0}}
+            transition={
+                {
+                    delay: 0.2,
+                }
+            }
+            >
+                <Link href="#contact"
+                className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
+                // active:scale-105 transition - this is a tailwind class
+                // make the button bigger when it's active
+                // transition-duration: 150ms;
+                >Contact me
+                <BsArrowRight /> 
+                </Link>
 
+                <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-white active:scale-105 transition cursor-pointer border border-black/10"
+                href="/Damir_Yakupov_CV.pdf" download >
+                Download CV <HiDownload/>{" "}
+                </a>
+
+                <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-white active:scale-105 transition cursor-pointer border border-black/10"
+                href="https://www.linkedin.com/in/damir-yakupov-73b868223/"
+                target="_blank">
+                <BsLinkedin/>{" "}
+                </a>
+
+                <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-white active:scale-105 transition cursor-pointer border border-black/10"
+                href="https://github.com/DamirFM"
+                target="_blank">
+                <FaGithubSquare />{" "}
+                </a>
+            </motion.div>
     </section>
   )
 }
