@@ -1,6 +1,5 @@
 import './globals.css'
 import Header from "@/components/header";
-import Intro from "@/components/intro";
 import { Inter } from 'next/font/google'
 // instantiating the font
 const inter = Inter({ subsets: ['latin'] })
