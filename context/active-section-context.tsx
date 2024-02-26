@@ -21,7 +21,6 @@ export default function ActiveSectionContextProvider ({ children }: ActiveSectio
 // for keeping track of the active section we need to use the context state
 const [ activeSection, setActiveSection ] = useState<SectionName>("Home");
 
-
   return (
   <ActiveSectionContext.Provider value={{
     activeSection,
