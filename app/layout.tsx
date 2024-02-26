@@ -15,7 +15,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    // !scroll-smooth is a custom class to enable smooth scrolling (! - is a custom prefix to avoid purging the class)
+    <html lang="en" className='!scroll-smooth'>
       {/* applying the font inter */}
       <body className={`${inter.className} bg-gray-50 text-gray-950 relative h-[5000px] py-28 sm:pt-36`}>
         <div className="bg-[#fbe2e8] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem]"></div>

@@ -19,7 +19,7 @@ export default function Project({
     imageUrl
 }: ProjectProps) {
     // we need to use useRef hook to get the reference to the element
-    const ref = useRef<HTMLElement>(null);
+    const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
         // first we need actial HTML reference to the element
         target: ref,
