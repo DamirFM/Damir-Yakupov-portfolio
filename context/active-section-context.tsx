@@ -1,14 +1,17 @@
 "use client";
 import React, { useState, createContext, useContext } from 'react'
+// replace steps 2 and 3 by impotring SectionName from different file
+import type { SectionName } from '@/lib/types';
+
 // === 3 ===
 // Import the links array from the data file for the type of the activeSection state
-import { links } from "../lib/data";
+// import { links } from "../lib/data";
 // === 2 ===
 // we need type SectionName for the activeSection state
 // we can use typeof to get the type of the name property of the links array
 // this way we can be sure that the activeSection state will always be one of the names of the sections 
 // number is used to get the type of the name property of the links array(it could be any of links)
-type SectionName = (typeof links)[number]["name"];
+// type SectionName = (typeof links)[number]["name"];
 // === 6 ===
 // ActiveSectionContextProviderProps is a type for the props of the ActiveSectionContextProvider function
 type ActiveSectionContextProviderProps = {

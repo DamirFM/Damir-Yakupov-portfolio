@@ -3,35 +3,40 @@
 import React, { useEffect } from 'react'
 import { motion } from "framer-motion";
 import SectionHeading from "./section-heading";
-import { useInView } from 'react-intersection-observer'; 
-import { useActiveSectionContext } from '@/context/active-section-context';
-import { time } from 'console';
+// import { useInView } from 'react-intersection-observer'; 
+// import { useActiveSectionContext } from '@/context/active-section-context';
+import { useSectionInView } from '@/lib/hooks';
+
 
 export default function About() {
-  // useInView is a hook that returns a boolean value, which tells us if the element is in the viewport or not
-  // it is not reccomended to set State during the rendering, instead we will use UseEffect hook
-  // to synchroniza external system (Global state) with the inView variable value
-  // === 1 ===
-  const {ref, inView} = useInView({
-    threshold: 0.75
-  });
+  // FIRST WAY
 
-  const { setActiveSection, timeOfLastClick } = useActiveSectionContext()
+
+  // // useInView is a hook that returns a boolean value, which tells us if the element is in the viewport or not
+  // // it is not reccomended to set State during the rendering, instead we will use UseEffect hook
+  // // to synchroniza external system (Global state) with the inView variable value
+  // // === 1 ===
+  // const {ref, inView} = useInView({
+  //   threshold: 0.75
+  // });
+
+  // const { setActiveSection, timeOfLastClick } = useActiveSectionContext()
 
   
-  // === 2 ===
-  // useEffect is a hook that allows you to perform side effects in your functional components
-  // in this case keep track of the active section
-  useEffect(() => {
-    // current time minus the time of the last click, and if it is greater than 1000ms
-    if (inView && Date.now() - timeOfLastClick > 1000) {
-      setActiveSection("About")
-    }
-  }, 
-  // if inView - the value of the inView variable is true, then the setActiveSection function is called
-  [inView, setActiveSection, timeOfLastClick])
+  // // === 2 ===
+  // // useEffect is a hook that allows you to perform side effects in your functional components
+  // // in this case keep track of the active section
+  // useEffect(() => {
+  //   // current time minus the time of the last click, and if it is greater than 1000ms
+  //   if (inView && Date.now() - timeOfLastClick > 1000) {
+  //     setActiveSection("About")
+  //   }
+  // }, 
+  // // if inView - the value of the inView variable is true, then the setActiveSection function is called
+  // [inView, setActiveSection, timeOfLastClick])
   
-
+ // SECOND WAY
+ const {ref} = useSectionInView("About")
 
 
   return (
