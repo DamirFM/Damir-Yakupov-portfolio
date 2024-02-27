@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, createContext } from 'react'
+import React, { useState, createContext, useContext } from 'react'
 // === 3 ===
 // Import the links array from the data file for the type of the activeSection state
 import { links } from "../lib/data";
@@ -20,6 +20,10 @@ type ActiveSectionContextType = {
   // we already defined SectionName type, it uses links array, so we can be sure that the activeSection will be one of the names of the sections
   activeSection: SectionName;
   setActiveSection: React.Dispatch<React.SetStateAction<SectionName>>;
+  // type for the timeOfLastClick state
+  // === 9.1 ===
+  timeOfLastClick: number;
+  setTimeOfLastClick:  React.Dispatch<React.SetStateAction<number>>;
 }
 // === 7 ===
 // to use activeSection and setActiveSection in the Header component we need to crate a Context Provider (global state)
@@ -27,8 +31,8 @@ type ActiveSectionContextType = {
 // This context is going to be used to share a certain state 
 // and its updater function across different components in your React application.
 // The type of the context is ActiveSectionContextType | null. This means that the context can either hold 
-// a value of type ActiveSectionContextType or null.
-const ActiveSectionContext = createContext<ActiveSectionContextType | null>(null);
+// a value of type ActiveSectionContextType or null.  
+export const ActiveSectionContext = createContext<ActiveSectionContextType | null>(null);
 
 
 export default function ActiveSectionContextProvider ({ children }: ActiveSectionContextProviderProps) {
@@ -44,6 +48,12 @@ export default function ActiveSectionContextProvider ({ children }: ActiveSectio
 // for access to this state we need to go to root component and wrap it with the context provider
 
 const [ activeSection, setActiveSection ] = useState<SectionName>("Home");
+// === 9 ===
+// second hook for keep track of clicking to the bavigation links
+// also we need to add type information about it to the ActiveSectionContextType
+// we provide this state here and then we have to consume it in the children components
+
+const [timeOfLastClick, setTimeOfLastClick] = useState(0); //we need to keep thack of this to disable the observer temporarily when user clicks on a link
 
 
 
@@ -53,14 +63,31 @@ const [ activeSection, setActiveSection ] = useState<SectionName>("Home");
   <ActiveSectionContext.Provider 
   // value is an object with the activeSection and setActiveSection properties
   // we define what value we want to share with the children
+  // ===1=== here we pass the state and the updater function to the value prop
+  // ===2=== on the children level we can access the value of the context
   value={{
+    // ===1===
     // for read an activeSection we need to use activeSection
     activeSection,
     // for setting an activeSection we need to use setActiveSection
-    setActiveSection
+    setActiveSection,
+
+    // ===2===
+    timeOfLastClick,
+    setTimeOfLastClick
   }}>
     {children}
   </ActiveSectionContext.Provider>
   )
   
+}
+// For avoind situation when ActiveSectionContext hav type of null
+// we going to use custom hook that takes care of that
+// it will have access for activeSection and setActiveSection
+export function useActiveSectionContext() {
+  const context = useContext(ActiveSectionContext);
+  if (context === null) {
+    throw new Error('useActiveSectionContext must be used within an ActiveSectionContextProvider');
+  }
+  return context;
 }

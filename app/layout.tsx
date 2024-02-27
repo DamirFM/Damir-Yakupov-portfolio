@@ -1,3 +1,6 @@
+// server side component
+// children component become CLIENT SIDE COMPONENT if we mention "use client" at the top of the file
+// or if we import them to the client side component 
 import './globals.css'
 import Header from "@/components/header";
 import ActiveSectionContextProvider from '@/context/active-section-context';
@@ -24,10 +27,17 @@ export default function RootLayout({
         <div className="bg-[#d7ecfb] absolute top-[-6rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[28rem] xl:left-[15rem] 2xl:left-[-5rem]"></div>
         {/* page.tsx */}
 
-        {/* // for access to useState we need to wrap all components we want with the context provider
- */}
+       {/* we are wraped by client component rest of the application, but as long as we use children PROP inside the ActiveSectionContextProvider */}
+
+       {/* // for access to useState we need to wrap all components we want with the context provider */}
+
+       {/* === 1 === */}
+       {/* here we are PROVIDED the global context */}
+    
        <ActiveSectionContextProvider>
-       <Header/>
+       {/* === 2 === */}
+       {/* all the children have to consume the global context */}
+       <Header/> 
        {/* children => page.tsx */}
        {children}
       </ActiveSectionContextProvider>        
