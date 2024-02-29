@@ -26,7 +26,7 @@ type ActiveSectionContextType = {
   // type for the timeOfLastClick state
   // === 9.1 ===
   timeOfLastClick: number;
-  setTimeOfLastClick:  React.Dispatch<React.SetStateAction<number>>;
+  setTimeOfLastClick: React.Dispatch<React.SetStateAction<number>>;
 }
 // === 7 ===
 // to use activeSection and setActiveSection in the Header component we need to crate a Context Provider (global state)
@@ -38,51 +38,51 @@ type ActiveSectionContextType = {
 export const ActiveSectionContext = createContext<ActiveSectionContextType | null>(null);
 
 
-export default function ActiveSectionContextProvider ({ children }: ActiveSectionContextProviderProps) {
-// === 5 ===
-// because on the root level we wrapped the children with the context provider 
-// we have to set the { children } as a prop of ActiveSectionContextProvider function
+export default function ActiveSectionContextProvider({ children }: ActiveSectionContextProviderProps) {
+  // === 5 ===
+  // because on the root level we wrapped the children with the context provider 
+  // we have to set the { children } as a prop of ActiveSectionContextProvider function
 
-// === 1 ===
-// for keeping track of the active section we need to use the context state
-// we are setting useState to string - ("Home"), but it can't be anything else than the name of the section
-// we neen tell to TS what type is going to be
-// === 4 ===
-// for access to this state we need to go to root component and wrap it with the context provider
+  // === 1 ===
+  // for keeping track of the active section we need to use the context state
+  // we are setting useState to string - ("Home"), but it can't be anything else than the name of the section
+  // we neen tell to TS what type is going to be
+  // === 4 ===
+  // for access to this state we need to go to root component and wrap it with the context provider
 
-const [ activeSection, setActiveSection ] = useState<SectionName>("Home");
-// === 9 ===
-// second hook for keep track of clicking to the bavigation links
-// also we need to add type information about it to the ActiveSectionContextType
-// we provide this state here and then we have to consume it in the children components
+  const [activeSection, setActiveSection] = useState<SectionName>("Home");
+  // === 9 ===
+  // second hook for keep track of clicking to the bavigation links
+  // also we need to add type information about it to the ActiveSectionContextType
+  // we provide this state here and then we have to consume it in the children components
 
-const [timeOfLastClick, setTimeOfLastClick] = useState(0); //we need to keep thack of this to disable the observer temporarily when user clicks on a link
+  const [timeOfLastClick, setTimeOfLastClick] = useState(0); //we need to keep thack of this to disable the observer temporarily when user clicks on a link
 
 
 
   return (
     // createContext returns an object with Provider and Consumer properties
     // we are wrapping the children with the context provider
-  <ActiveSectionContext.Provider 
-  // value is an object with the activeSection and setActiveSection properties
-  // we define what value we want to share with the children
-  // ===1=== here we pass the state and the updater function to the value prop
-  // ===2=== on the children level we can access the value of the context
-  value={{
-    // ===1===
-    // for read an activeSection we need to use activeSection
-    activeSection,
-    // for setting an activeSection we need to use setActiveSection
-    setActiveSection,
+    <ActiveSectionContext.Provider
+      // value is an object with the activeSection and setActiveSection properties
+      // we define what value we want to share with the children
+      // ===1=== here we pass the state and the updater function to the value prop
+      // ===2=== on the children level we can access the value of the context
+      value={{
+        // ===1===
+        // for read an activeSection we need to use activeSection
+        activeSection,
+        // for setting an activeSection we need to use setActiveSection
+        setActiveSection,
 
-    // ===2===
-    timeOfLastClick,
-    setTimeOfLastClick
-  }}>
-    {children}
-  </ActiveSectionContext.Provider>
+        // ===2===
+        timeOfLastClick,
+        setTimeOfLastClick
+      }}>
+      {children}
+    </ActiveSectionContext.Provider>
   )
-  
+
 }
 // For avoind situation when ActiveSectionContext hav type of null
 // we going to use custom hook that takes care of that
