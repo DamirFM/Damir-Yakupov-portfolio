@@ -23,8 +23,6 @@ export default function Experience() {
                         {/* VerticalTimelineElement do not using the Tailwind properties */}
                         {/* I can not use className, but insted I will use contentStyle = {{}}  */}
                         <VerticalTimelineElement
-                            // visible = {true} - fix the bug with the card not showing
-                            visible={true}
                             contentStyle={{
                                 background:" #f3f4f6 ",
                                 boxShadow: "none",
