@@ -21,7 +21,7 @@ export default function Project({
     // we need to use useRef hook to get the reference to the element
     const ref = useRef<HTMLDivElement>(null);
     const { scrollYProgress } = useScroll({
-        // first we need actial HTML reference to the element
+        // first we need actual HTML reference to the element
         target: ref,
         // then we need to define the viewport offset
         // this mean when we actually will start the animation
