@@ -8,8 +8,8 @@ import Link from "next/link";
 import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { HiDownload } from "react-icons/hi";
 import { FaGithubSquare } from "react-icons/fa";
+import { useActiveSectionContext } from "@/context/active-section-context";
 // import { useInView } from 'react-intersection-observer'; 
-// import { useActiveSectionContext } from '@/context/active-section-context';
 import { useSectionInView } from "@/lib/hooks";
 
 
@@ -41,7 +41,11 @@ export default function Intro() {
   // SECOND WAY
  const {ref} = useSectionInView("Home")
 
+
+ const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
+
   return (
+    
     <section 
     ref={ref}
     className="mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem] "
@@ -99,15 +103,25 @@ export default function Intro() {
             }
             >
                 <Link href="#contact"
-                className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
+                className="group bg-gray-900 text-white px-7 py-3 flex 
+                items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110
+                 hover:bg-gray-950 active:scale-105 transition cursor-pointer"
                 // active:scale-105 transition - this is a tailwind class
                 // make the button bigger when it's active
                 // transition-duration: 150ms;
+                onClick={() => {
+                    // setActiveSection - is a function that will change the value of the activeSection
+                    setActiveSection("Contact");
+                    // when we click on the link we set the time of the last click 
+                    setTimeOfLastClick(Date.now());
+                }}
                 >Contact me
                 <BsArrowRight /> 
                 </Link>
 
-                <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-white active:scale-105 transition cursor-pointer border border-black/10"
+                <a className="group bg-white px-7 py-3 flex items-center gap-2 
+                rounded-full outline-none focus:scale-110 hover:scale-110
+                 hover:bg-white active:scale-105 transition cursor-pointer border border-black/10"
                 href="/Damir_Yakupov_CV.pdf" download >
                 Download CV <HiDownload/>{" "}
                 </a>
