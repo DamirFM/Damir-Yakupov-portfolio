@@ -8,7 +8,7 @@ import 'react-vertical-timeline-component/style.min.css';
 
 export default function Experience() {
     // SECOND WAY
-    const { ref } = useSectionInView("Skills")
+    const { ref } = useSectionInView("Experience")
 
     return (
         <section

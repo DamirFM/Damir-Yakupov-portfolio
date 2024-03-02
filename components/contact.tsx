@@ -6,13 +6,13 @@ import { FaPaperPlane } from 'react-icons/fa';
 import { motion } from "framer-motion";
 export default function Contact() {
 // SECOND WAY
-const { ref } = useSectionInView("Skills")
+const { ref } = useSectionInView("Contact")
 
-const sendEmail = async (formData: FormData) => {
-    'use server';
-console.log(formData.get('senderEmail'))
-console.log(formData.get('message'))
-}
+// const sendEmail = async (formData: FormData) => {
+//     'use server';
+// console.log(formData.get('senderEmail'))
+// console.log(formData.get('message'))
+// }
   return (
     <motion.section
     ref={ref}
