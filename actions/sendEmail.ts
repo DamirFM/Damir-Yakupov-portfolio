@@ -31,11 +31,12 @@ export const sendEmail = async (formData: FormData) => {
         }
     }
 
-
-
+    // we can return to the client side the data or the error
+    // and on the client side we can access the data or the error
+    let data;
     // now we can use resend variable to send Emails
     try {
-        await resend.emails.send({
+        data = await resend.emails.send({
             from: 'Contact form <onboarding@resend.dev>',
             to: 'yakupovdamir93@gmail.com',
             subject: 'New message from the contact form',
@@ -52,6 +53,6 @@ export const sendEmail = async (formData: FormData) => {
             error: "Failed to send the email"
         }
     }
-
-}
+    return { data }
+};
 

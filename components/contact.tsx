@@ -1,9 +1,10 @@
 "use client";
-import React, { experimental_useEffectEvent } from 'react'
+import React from 'react'
 import SectionHeading from './section-heading';
 import { useSectionInView } from "@/lib/hooks";
 import SubmitBtn from './submit-btn';
 import { motion } from "framer-motion";
+import  toast  from 'react-hot-toast';
 // importing server action
 import { sendEmail } from "@/actions/sendEmail";
 
@@ -19,7 +20,7 @@ const { ref } = useSectionInView("Contact")
     ref={ref}
     id="contact"
     // min width 100% and max width 38rem
-    className="mb-20 sm:mb-28 w-[min(100%, 38rem)]] text-center"
+    className="mb-28 sm:mb-28 w-[min(100%, 38rem)]] text-center "
     initial={{ opacity: 0,}}
     animate={{ opacity: 1, }} 
     transition={{ duration: 1.35 }}
@@ -48,7 +49,15 @@ const { ref } = useSectionInView("Contact")
         console.log("Running on the client")
         console.log(formData.get('senderEmail'))
         console.log(formData.get('message'))
-        await sendEmail(formData)
+
+        const { data, error} = await sendEmail(formData);
+
+        if (error) {
+            toast.error(error)
+            return;
+        }
+        toast.success("Email sent successfully!")
+        
     }}
 
     // or we can do action={sendEmail}
