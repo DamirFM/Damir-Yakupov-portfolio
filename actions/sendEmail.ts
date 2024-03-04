@@ -1,4 +1,5 @@
 'use server';
+import { type } from 'os';
 // Server side part of handle form submission
 // Client side will be on the actions/sendEmail.ts
 
@@ -27,13 +28,13 @@ if (!senderEmail || !message) {
     }
 }
 
-
 // now we can use resend variable to send Emails
 resend.emails.send({
     from: 'onboarding@resend.dev',
     to: 'yakupovdamir93@gmail.com',
     subject: 'New message from the contact form',
-    text: `Email: ${senderEmail}\nMessage: ${message}`
+    reply_to: senderEmail as string,
+    text: `Email: ${senderEmail}\nMessage: ${message}` as string
 })
 }
 
