@@ -3,6 +3,7 @@
 // or if we import them to the client side component 
 import './globals.css'
 import Header from "@/components/header";
+import Footer from "@/components/footer";
 import ActiveSectionContextProvider from '@/context/active-section-context';
 import { Inter } from 'next/font/google'
 // instantiating the font
@@ -40,6 +41,7 @@ export default function RootLayout({
        <Header/> 
        {/* children => page.tsx */}
        {children}
+       <Footer/>
       </ActiveSectionContextProvider>        
        
         </body>
