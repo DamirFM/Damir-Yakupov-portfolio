@@ -4,15 +4,14 @@ import SectionHeading from './section-heading';
 import { useSectionInView } from "@/lib/hooks";
 import { FaPaperPlane } from 'react-icons/fa';
 import { motion } from "framer-motion";
+// importing server action
+import { sendEmail } from "@/actions/sendEmail";
+
 export default function Contact() {
 // SECOND WAY
 const { ref } = useSectionInView("Contact")
 
-// const sendEmail = async (formData: FormData) => {
-//     'use server';
-// console.log(formData.get('senderEmail'))
-// console.log(formData.get('message'))
-// }
+//
   return (
     <motion.section
     ref={ref}
@@ -35,14 +34,22 @@ const { ref } = useSectionInView("Contact")
     yakupovdamir93@gmail.com</a> or by using the contact form.</p>
 
     <form 
+    // Client side part of handle form submission
+    // Server side will be on the actions/sendEmail.ts
+
     // Way how to handle with the value of the input and textarea
     // instead of using onSubmit() and e.preventDefault()
     // we can use action attribute and send the data to the server
     // action will work only with async function and only on NEXT.JS
     // we need to configure the next.config.js file
-    action={async FormData => {
-        console.log(FormData)
+    action={ async (formData) => {
+        console.log("Running on the client")
+        console.log(formData.get('senderEmail'))
+        console.log(formData.get('message'))
+        await sendEmail(formData)
     }}
+
+    // or we can do action={sendEmail}
 
     // flex flex-col - will make the input and textarea to be in column
     className='mt-10 flex flex-col'>
