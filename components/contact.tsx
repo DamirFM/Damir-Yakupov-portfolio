@@ -1,17 +1,19 @@
 "use client";
-import React from 'react'
+import React, { experimental_useEffectEvent } from 'react'
 import SectionHeading from './section-heading';
 import { useSectionInView } from "@/lib/hooks";
-import { FaPaperPlane } from 'react-icons/fa';
+import SubmitBtn from './submit-btn';
 import { motion } from "framer-motion";
 // importing server action
 import { sendEmail } from "@/actions/sendEmail";
+
 
 export default function Contact() {
 // SECOND WAY
 const { ref } = useSectionInView("Contact")
 
-//
+
+
   return (
     <motion.section
     ref={ref}
@@ -72,20 +74,7 @@ const { ref } = useSectionInView("Contact")
         required
         maxLength={500}/>
         
-        <button 
-        // added group to make the button to have a hover effect
-        className='group h-[3rem] w-[8rem] bg-gray-900 rounded-full 
-        flex justify-center text-white items-center gap-2 outline-none transition-all
-        focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 cursor-pointer' 
-        type="submit">
-        Send <FaPaperPlane
-        className='text-xs opacity-70 transition-all
-        // over hover effect move FaPaperPlane horizontally and vertically
-        group-hover:translate-x-1
-        group-hover:-translate-y-1
-        '
-        />{' '}
-        </button>
+        <SubmitBtn />
 
     </form>
 
