@@ -84,7 +84,7 @@ export default function ActiveSectionContextProvider({ children }: ActiveSection
   )
 
 }
-// For avoind situation when ActiveSectionContext hav type of null
+// For avoind situation when ActiveSectionContext have type of null
 // we going to use custom hook that takes care of that
 // it will have access for activeSection and setActiveSection
 export function useActiveSectionContext() {

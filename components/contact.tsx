@@ -20,7 +20,7 @@ const { ref } = useSectionInView("Contact")
     ref={ref}
     id="contact"
     // min width 100% and max width 38rem
-    className="mb-28 sm:mb-28 w-[min(100%, 38rem)]] text-center "
+    className="mb-28 sm:mb-28 w-[min(100%, 38rem)]] text-center"
     initial={{ opacity: 0,}}
     animate={{ opacity: 1, }} 
     transition={{ duration: 1.35 }}
@@ -63,10 +63,10 @@ const { ref } = useSectionInView("Contact")
     // or we can do action={sendEmail}
 
     // flex flex-col - will make the input and textarea to be in column
-    className='mt-10 flex flex-col'>
+    className='mt-10 flex flex-col '>
 
         <input 
-        className='h-14 px-4 rounded-lg border border-black/10'
+        className='h-14 px-4 rounded-lg border border-black/10  dark:bg-white/10'
         type="email"
         name="senderEmail"
         // Validation
@@ -77,7 +77,7 @@ const { ref } = useSectionInView("Contact")
         placeholder='Your email'/>
 
         <textarea 
-        className='h-52 my-3 px-4 py-3 rounded-lg border border-black/10'
+        className='h-52 my-3 px-4 py-3 rounded-lg border border-black/10  dark:bg-white/10'
         name="message"
         placeholder='Your message'
         required

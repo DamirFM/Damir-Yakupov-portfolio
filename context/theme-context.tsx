@@ -65,15 +65,17 @@ useEffect(() => {
       if (localTheme === "dark") {
         document.documentElement.classList.add("dark");
       }
-  // check if the user has a dark mode preference on their OS locally
+// check if the user has a dark mode preference on their OS locally
   } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     setTheme("dark");
     document.documentElement.classList.add("dark");
   }
   
-  // [] - means that this effect will run only once after the component is loaded
+// [] - means that this effect will run only once after the component is loaded
 }, []);
   return (
+// createContext returns an object with Provider and Consumer properties
+// we are wrapping the children with the context provider
     <ThemeContext.Provider
       value={{
         theme,
@@ -84,12 +86,14 @@ useEffect(() => {
     </ThemeContext.Provider>
   );
 }
-
-export function useTheme() {
+// For avoind situation when ThemeContext have type of null
+// we going to use custom hook that takes care of that
+// it will have access for theme and setTheme(toggleTheme)
+export function useThemeContext() {
   const context = useContext(ThemeContext);
 
   if (context === null) {
-    throw new Error("useTheme must be used within a ThemeContextProvider");
+    throw new Error("useThemeContext must be used within a ThemeContextProvider");
   }
 
   return context;

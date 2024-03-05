@@ -61,14 +61,20 @@ export default function Intro() {
                 duration: 0.3,
             }}
             >
+            <a href="https://unsplash.com/@damirfm" target="_blank">
              <Image 
              src="/Damir_Yakupov.jpeg" 
              alt="Damir Yakupov portrait"  
              width="192"
              height="192"
              priority={true}
-             className="h-30 w-25 rounded-full object-cover border-[0.35rem] border-white shadow-xl"
+             
+             className="h-30 w-25 rounded-full object-cover border-[0.35rem] border-white shadow-xl dark:border-black/10"
+             onClick={() => {
+                
+             }}
             />
+            </a>
              </motion.div>
             </div>
         </div>
