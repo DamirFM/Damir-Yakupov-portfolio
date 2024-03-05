@@ -9,12 +9,12 @@ const nextConfig = {
         '@react-email/components',
         '@react-email/render',
         '@react-email/tailwind'
-    ]
-    },
+    ],
     reactServerComponents: {
       use: ["@react-email/tailwind"]}
+    }
   };
   
-  export default nextConfig;
+  module.exports = nextConfig;
 
   
