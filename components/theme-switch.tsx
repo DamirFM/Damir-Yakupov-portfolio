@@ -1,46 +1,11 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
-
-type Theme = "light" | "dark";
 
 export default function ThemeSwitch() {
 
 
-const [theme, setTheme] = useState<Theme>("light");
-
-  const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      window.localStorage.setItem("theme", "dark");
-      // add the dark class to the body (dom) 
-      document.documentElement.classList.add("dark");
-    } else {
-      setTheme("light");
-      window.localStorage.setItem("theme", "light");
-      // remove the dark class from the body (dom)
-      document.documentElement.classList.remove("dark");
-    }
-  }
-
-  // to sync local storage with the react theme state
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem("theme") as Theme | null;
-    if (localTheme) {
-      setTheme(localTheme);
-
-        if (localTheme === "dark") {
-          document.documentElement.classList.add("dark");
-        }
-    // check if the user has a dark mode preference on their OS locally
-    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    }
-    
-    // [] - means that this effect will run only once after the component is loaded
-  }, []);
 
 
   return (

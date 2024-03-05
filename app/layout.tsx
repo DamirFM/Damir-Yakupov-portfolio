@@ -5,6 +5,7 @@ import './globals.css'
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ActiveSectionContextProvider from '@/context/active-section-context';
+import ThemeContextProvider from '@/context/theme-context';
 import { Inter } from 'next/font/google'
 import { Toaster } from 'react-hot-toast';
 import ThemeSwitch from '@/components/theme-switch';
@@ -33,18 +34,18 @@ export default function RootLayout({
         {/* // for access to useState we need to wrap all components we want with the context provider */}
         {/* === 1 === */}
         {/* here we are PROVIDED the global context */}
+        <ThemeContextProvider>
         <ActiveSectionContextProvider>
-          {/* === 2 === */}
-          {/* all the children have to consume the global context */}
-          <Header />
-          {/* children => page.tsx */}
-          {children}
-          <Footer />
-          <Toaster   
-          position="top-center"
-          reverseOrder={true}/>
+              {/* === 2 === */}
+              {/* all the children have to consume the global context */}
+              <Header />
+              {/* children => page.tsx */}
+              {children}
+              <Footer />
+              <Toaster position="top-center" reverseOrder={true}/>
+              <ThemeSwitch/>
         </ActiveSectionContextProvider>
-        <ThemeSwitch/>
+        </ThemeContextProvider>
       </body>
     </html>
   )
