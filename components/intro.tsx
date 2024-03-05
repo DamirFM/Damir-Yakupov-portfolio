@@ -73,7 +73,7 @@ export default function Intro() {
             </div>
         </div>
             <motion.h1
-            className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl"
+            className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl dark:text-gray-300"
             initial={{opacity: 0, y: 100}}
             animate={{opacity: 1, y: 0}}
             transition={{
@@ -121,18 +121,18 @@ export default function Intro() {
 
                 <a className="group bg-white px-7 py-3 flex items-center gap-2 
                 rounded-full outline-none focus:scale-110 hover:scale-110
-                 hover:bg-white active:scale-105 transition cursor-pointer border border-black/10"
+                 hover:bg-white active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10"
                 href="/Damir_Yakupov_CV.pdf" download >
                 Download CV <HiDownload/>{" "}
                 </a>
 
-                <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-white active:scale-105 transition cursor-pointer border border-black/10"
+                <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-white active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10"
                 href="https://www.linkedin.com/in/damir-yakupov-73b868223/"
                 target="_blank">
                 <BsLinkedin/>{" "}
                 </a>
 
-                <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-white active:scale-105 transition cursor-pointer border border-black/10"
+                <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-white active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10"
                 href="https://github.com/DamirFM"
                 target="_blank">
                 <FaGithubSquare />{" "}

@@ -29,7 +29,7 @@ const { ref } = useSectionInView("Contact")
     }}
     >
     <SectionHeading>Contact me</SectionHeading>
-    <p className='text-gray-700 text-center -mt-6'
+    <p className='text-gray-700 text-center -mt-6 dark:text-white'
     >Feel free to get in touch with me directly at <a
     className='underline'
     // mailto - will open the default email client

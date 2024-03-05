@@ -32,7 +32,7 @@ export default function Header() {
 
   return <header className='flex z-[999] relative'>
     
-    <motion.div className='flex fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full'
+    <motion.div className='flex fixed top-0 left-1/2 h-[4.5rem] w-full rounded-none border border-white border-opacity-40 bg-white bg-opacity-80 shadow-lg shadow-black/[0.03] backdrop-blur-[0.5rem] sm:top-6 sm:h-[3.25rem] sm:w-[36rem] sm:rounded-full dark:bg-gray-950 dark:border-black/40 dark:bg-opacity-75 dark:' 
       // after applying motion we can use special props
       // initial state
       // crating new transform
@@ -63,7 +63,7 @@ export default function Header() {
           >
             <Link
               // clsx takes two arguments, first is the default class, second is the class that will be applied conditionally
-              className={clsx("flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition", { "text-gray-950": activeSection === link.name })}
+              className={clsx("flex w-full items-center justify-center px-3 py-3 dark:hover:text-gray-400 hover:text-gray-950 transition" , { "text-gray-400": activeSection === link.name })}
               href={link.hash}
               onClick={() => {
                 // setActiveSection - is a function that will change the value of the activeSection
@@ -77,7 +77,7 @@ export default function Header() {
               {
                 link.name === activeSection && (
                   <motion.span
-                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-200"
+                    className="bg-gray-100 rounded-full absolute inset-0 -z-10 dark:bg-gray-700"
                     layoutId="activeSection"
                     transition={{
                       type: "spring",
