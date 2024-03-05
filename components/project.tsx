@@ -1,15 +1,15 @@
 "use client";
 import React, { useRef } from 'react'
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import { useScroll, useTransform } from 'framer-motion'
 import { motion } from 'framer-motion'
 
 // lets metion ProjectProps here, by this way we can use it in the Project component
 type ProjectProps = {
-    title: string,
-    description: string,
-    tags: string[],
-    imageUrl: string
+    title: string;
+    description: string;
+    tags: readonly string[]; // Update the type to readonly string[]
+    imageUrl: StaticImageData;
 }
 
 export default function Project({
