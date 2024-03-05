@@ -65,7 +65,7 @@ export default function Skills() {
               className="px-5 py-3 border-black/[0.1] bg-gray-100 rounded-3xl dark:bg-white/10 dark:text-white/80"
               key={index}
               variants={fadeInAnimationVariants}
-              initial="initial" 
+              initial="initial"
               // whileInView is a prop that allows us to animate the element when it is in the viewport only
               whileInView="animate"
               // tetting for viewport to animate only once
