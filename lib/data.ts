@@ -37,75 +37,88 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Graduated bootcamp",
-    location: "Miami, FL",
+    title: "Graduated UofT bootcamp",
+    location: "Toronto, On",
     description:
-      "I graduated after 6 months of studying. I immediately found a job as a front-end developer.",
-    // icon: React.createElement(LuGraduationCap) for ts file
-    // icon: <LuGraduationCap /> for tsx file
+      "I completed an intensive 3-month program where I mastered the basics of full-stack web development. This comprehensive training equipped me to embark on my career journey as a versatile developer, proficient in both front-end and back-end development.",
+
     icon: React.createElement(LuGraduationCap), 
-    date: "2019",
+    date: "2024",
   },
   {
-    title: "Front-End Developer",
-    location: "Orlando, FL",
+    title: "Electronics Technician, Assurant",
+    location: "Toronto, On",
     description:
-      "I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.",
+      "I worked as technician, diagnose and repair electronic faults, meet deadlines, and reduce failures through data analysis. I also optimize team productivity by delegating tasks and training technicians.",
     icon: React.createElement(CgWorkAlt),
-    date: "2019 - 2021",
+    date: "2021 - 2023",
   },
   {
-    title: "Full-Stack Developer",
-    location: "Houston, TX",
+    title: "Electronics Engineer, Transneft",
+    location: "Kazan, Russia",
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: "2021 - present",
+      "I worked as an engineer managing SCADA systems. I conducted hardware maintenance, diagnosed electronic faults, and optimized productivity. Additionally, I resolved software issues, reducing downtime and meeting project deadlines.",
+    icon: React.createElement(CgWorkAlt),
+    date: "2017 - 2021",
+  },
+  {
+    title: "Master’s Degree, Ufa State Petroleum Technological University",
+    location: "Ufa, Russia",
+    description:
+      "I earned a Master's degree in Automation of Production Processes in the Oil and Gas Industry, where I gained expertise in optimizing production workflows, implementing advanced automation techniques, and enhancing operational efficiency within the oil and gas sector.",
+      icon: React.createElement(LuGraduationCap), 
+    date: "2015 - 2017",
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: "CorpComment",
+    title: "Vulcan's Computer Emporium",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+      "An ecommerce storefront. The store's niche is selling high end computer equipment to consumers.",
+    tags:["MongoDB","Express", "React", "Node.js", "Chakra UI"],
+    imageUrl: vulcan,
+  },
+  {
+    title: "The Bookshelf ",
+    description:
+      "Bookshelf App: Search, save, and manage books with ease. User can save them to their personal bookshelf",
+    tags: [ "MongoDB","Express", "React", "Node.js", "JWT", "Bootstrap", "Google Books API"],
     imageUrl: bookShelf,
   },
   {
-    title: "rmtDev",
+    title: "The Leftover",
     description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
+      "Web application allows you to input an ingredient you have sitting unused in your fridge, and find a delicious recipe to make for dinner!",
+    tags: ["CSS", "JavaScript", "HTML", "Bulma"],
     imageUrl: leftover,
   },
-  {
-    title: "Word Analytics",
-    description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
-    imageUrl: vulcan,
-  },
+
 ] as const;
 
 export const skillsData = [
+  "MongoDB",
+  "Express",
+  "React",
+  "Node.js",
   "HTML",
   "CSS",
   "JavaScript",
   "TypeScript",
-  "React",
   "Next.js",
-  "Node.js",
   "Git",
   "Tailwind",
-  "Prisma",
-  "MongoDB",
+  "Bootstrap",
   "Redux",
   "GraphQL",
   "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
+  "Insomnia",
+  "MySQL",
+  "Sequelize",
+  "JWT",
+  "Babel",
+  "PWA",
+  "Webpack",
+  "IndexedDB",
   "Framer Motion",
 ] as const;
