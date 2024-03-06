@@ -14,9 +14,9 @@ export default function Experience() {
 
     return (
         <section
-            className='mb-28 max-w-[56rem] text-center leading-8 sm:mb-42 scroll-mt-30 ' 
-            ref={ref}
-            id="experience">
+        ref={ref}
+        id="experience"
+        className='mb-28 max-w-[56rem] text-center leading-8 sm:mb-42 scroll-mt-30'>
             <SectionHeading>My Experience</SectionHeading>
             <VerticalTimeline 
             // lineColor = '' - fix the bug with the line not showing
