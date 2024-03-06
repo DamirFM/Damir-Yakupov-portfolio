@@ -64,8 +64,7 @@ export default function About() {
         My core stack is
         <span className="font-medium"> MERN (MongoDB, Express.js, React.js, Node.js)</span>.
         I possess  of TypeScript fundamentals and continually seek avenues for mastering valuable technologies.
-        Presently, I'm actively looking fo a <span className="font-medium">full-time role</span>
-        as a software developer.
+        Presently, I'm actively looking fo a <span className="font-medium">full-time role</span> as a software developer.
       </p>
 
       <p>
