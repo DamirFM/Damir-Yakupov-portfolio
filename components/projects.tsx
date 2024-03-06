@@ -42,7 +42,7 @@ export default function Projects() {
     <section 
     ref={ref}
     id="projects"
-    className='scroll-mt-28 mb-28'>
+    className='max-w-[50rem] scroll-mt-28 mb-28'>
       <SectionHeading>My Projects</SectionHeading>
       <div>
         {

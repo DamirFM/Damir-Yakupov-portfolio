@@ -55,7 +55,7 @@ export default function Skills() {
     <section
       ref={ref}
       id="skills"
-      className="mb-28 max-w-[53rem] text-center leading-8 sm:mb-40 scroll-mt-28 "
+      className="mb-28 max-w-[50rem] text-center leading-8 sm:mb-40 scroll-mt-28 "
     >
       <SectionHeading>My Skills</SectionHeading>
       <div>
