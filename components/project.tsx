@@ -10,13 +10,15 @@ type ProjectProps = {
     description: string;
     tags: readonly string[]; // Update the type to readonly string[]
     imageUrl: StaticImageData;
+    link: string;
 }
 
 export default function Project({
     title,
     description,
     tags,
-    imageUrl
+    imageUrl,
+    link,
 }: ProjectProps) {
     // we need to use useRef hook to get the reference to the element
     const ref = useRef<HTMLDivElement>(null);
@@ -53,7 +55,7 @@ export default function Project({
                         ))}
                     </ul>
                 </div>
-
+                <a href={link}>
                 <Image
                     src={imageUrl}
                     alt={"Project I've worked on"}
@@ -70,6 +72,7 @@ export default function Project({
                     group-even:group-hover:rotate-2
                 
                     group-even:right-[initial] group-even:-left-40' />
+                    </a>
             </section>
         </motion.div>
     )

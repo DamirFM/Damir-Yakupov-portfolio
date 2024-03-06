@@ -78,6 +78,7 @@ export const projectsData = [
       "An ecommerce storefront. The store's niche is selling high end computer equipment to consumers.",
     tags:["MongoDB","Express", "React", "Node.js", "Chakra UI"],
     imageUrl: vulcan,
+    link: "https://github.com/DamirFM/Vulcan-s-Computer-Emporium"
   },
   {
     title: "The Bookshelf ",
@@ -85,6 +86,7 @@ export const projectsData = [
       "Bookshelf App: Search, save, and manage books with ease. User can save them to their personal bookshelf",
     tags: [ "MongoDB","Express", "React", "Node.js", "JWT", "Bootstrap", "Google Books API"],
     imageUrl: bookShelf,
+    link: "https://github.com/DamirFM/Bookshelf-MERN_APP"
   },
   {
     title: "The Leftover",
@@ -92,6 +94,7 @@ export const projectsData = [
       "Web application allows you to input an ingredient you have sitting unused in your fridge, and find a delicious recipe to make for dinner!",
     tags: ["CSS", "JavaScript", "HTML", "Bulma"],
     imageUrl: leftover,
+    link: "https://github.com/DamirFM/leftover"
   },
 
 ] as const;
