@@ -63,15 +63,14 @@ export default function About() {
         feeling of finally figuring out a solution to a problem.
         My core stack is
         <span className="font-medium"> MERN (MongoDB, Express.js, React.js, Node.js)</span>.
-        I am also familiar with TypeScript. I am always looking to learn new technologies. I am currently looking for a
-        <span className="font-medium">full-time position</span>
+        I possess  of TypeScript fundamentals and continually seek avenues for mastering valuable technologies.
+        Presently, I'm actively looking fo a <span className="font-medium">full-time role</span>
         as a software developer.
       </p>
 
       <p>
-        <span className="italic">When I'm not coding</span>,
-        I enjoy hockey, watching movies, and attending music concerts.
-        I also enjoy <span className="font-medium">learning new things</span>.
+        <span className="italic">During my non-coding hours,</span>,
+        I find pleasure in photography, watching movies, and attending music concerts.
       </p>
 
     </motion.section>
