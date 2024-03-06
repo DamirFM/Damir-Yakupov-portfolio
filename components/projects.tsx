@@ -31,10 +31,10 @@ export default function Projects() {
   // // if inView - the value of the inView variable is true, then the setActiveSection function is called
   // [inView, setActiveSection, timeOfLastClick])
 
-  // SECOND WAY
+
   
   // SECOND WAY
- const {ref} = useSectionInView("Projects")
+ const {ref} = useSectionInView("Projects", 0.5)
 
 
   return (
@@ -42,7 +42,7 @@ export default function Projects() {
     <section 
     ref={ref}
     id="projects"
-    className='max-w-[50rem] scroll-mt-28 mb-28'>
+    className='mb-28 max-w-[50rem] text-center leading-8 sm:mb-40 scroll-mt-28 '>
       <SectionHeading>My Projects</SectionHeading>
       <div>
         {

@@ -9,12 +9,12 @@ import { useThemeContext } from "@/context/theme-context";
 
 export default function Experience() {
     // SECOND WAY
-    const { ref } = useSectionInView("Experience")
+    const { ref } = useSectionInView("Experience", 0.5)
     const { theme } = useThemeContext();
 
     return (
         <section
-            className='max-w-[50rem] scroll-mt-28 mb-28 sm:mb-40' 
+            className='mb-28 max-w-[50rem] text-center leading-8 sm:mb-40 scroll-mt-28 ' 
             ref={ref}
             id="experience">
             <SectionHeading>My Experience</SectionHeading>
