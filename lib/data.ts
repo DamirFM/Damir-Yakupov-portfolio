@@ -84,7 +84,7 @@ export const projectsData = [
     title: "The Bookshelf ",
     description:
       "Bookshelf App: Search, save, and manage books with ease. User can save them to their personal bookshelf",
-    tags: [ "MongoDB","Express", "React", "Node.js", "JWT", "Bootstrap", "Google Books API"],
+    tags: [ "MongoDB","Express", "React", "Node.js", "JWT", "Bootstrap"],
     imageUrl: bookShelf,
     link: "https://github.com/DamirFM/Bookshelf-MERN_APP"
   },
