@@ -14,7 +14,7 @@ export default function Experience() {
 
     return (
         <section
-            className='mb-28 max-w-[50rem] text-center leading-8 sm:mb-40 scroll-mt-28 ' 
+            className='mb-28 max-w-[56rem] text-center leading-8 sm:mb-42 scroll-mt-30 ' 
             ref={ref}
             id="experience">
             <SectionHeading>My Experience</SectionHeading>
