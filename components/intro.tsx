@@ -90,7 +90,7 @@ export default function Intro() {
                 <span className="font-bold">Hello, I'm Damir.</span> I'm a{" "}
                 <span className="font-bold">full-stack developer</span> with expertise in 
                 <span className="font-bold"> React, Express, Node.js, and MongoDB. </span>
-                As a <span className="underline">University of Toronto bootcamp graduate</span>, I've
+               I've
                 polished my skills in crafting
                 <span className="italic"> dynamic and efficient </span>
                 web applications.

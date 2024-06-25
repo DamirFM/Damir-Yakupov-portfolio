@@ -68,7 +68,7 @@ export default function About() {
       </p>
 
       <p>
-        <span className="italic">During my non-coding hours,</span>,
+        <span className="italic">During my non-coding hours</span>,
         I find pleasure in photography, watching movies, and attending music concerts.
       </p>
 
