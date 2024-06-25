@@ -3,7 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import bookShelf from "@/public/bookShelf.png";
-import leftover from "@/public/leftover.png";
+import fruitWave from "@/public/leftover.png";
 import vulcan from "@/public/vulcan.png";
 
 
@@ -54,10 +54,10 @@ export const experiencesData = [
     date: "2021 - 2023",
   },
   {
-    title: "Electronics Engineer, Transneft",
+    title: "Software Engineer, Transneft",
     location: "Kazan, Russia",
     description:
-      "I worked as an engineer managing SCADA systems. I conducted hardware maintenance, diagnosed electronic faults, and optimized productivity. Additionally, I resolved software issues, reducing downtime and meeting project deadlines.",
+      "Led the development of a pipeline leak detection and localization system, effectively preventing emergency spills and thefts of oil and oil products",
     icon: React.createElement(CgWorkAlt),
     date: "2017 - 2021",
   },
@@ -81,7 +81,7 @@ export const projectsData = [
     link: "https://github.com/DamirFM/Vulcan-s-Computer-Emporium"
   },
   {
-    title: "The Bookshelf ",
+    title: "The Bookshelf",
     description:
       "Bookshelf App: Search, save, and manage books with ease. User can save them to their personal bookshelf",
     tags: [ "MongoDB","Express", "React", "Node.js", "JWT", "Bootstrap"],
@@ -89,12 +89,12 @@ export const projectsData = [
     link: "https://github.com/DamirFM/Bookshelf-MERN_APP"
   },
   {
-    title: "The Leftover",
+    title: "FruitWave",
     description:
-      "Web application allows you to input an ingredient you have sitting unused in your fridge, and find a delicious recipe to make for dinner!",
-    tags: ["CSS", "JavaScript", "HTML", "Bulma"],
-    imageUrl: leftover,
-    link: "https://github.com/DamirFM/leftover"
+      "Angular-based e-commerce platform that allows users to browse and purchase a variety of products.",
+    tags: ["Stripe", "TypeScript", "Angular Material", "Angular"],
+    imageUrl: fruitWave,
+    link: "https://github.com/DamirFM/FruitWave"
   },
 
 ] as const;
@@ -104,6 +104,7 @@ export const skillsData = [
   "Express",
   "React",
   "Node.js",
+  "Angular",
   "HTML",
   "CSS",
   "JavaScript",
