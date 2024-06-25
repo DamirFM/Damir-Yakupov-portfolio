@@ -3,7 +3,7 @@ import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import bookShelf from "@/public/bookShelf.png";
-import fruitWave from "@/public/leftover.png";
+import fruitWave from "@/public/fruitWave.png";
 import vulcan from "@/public/vulcan.png";
 
 
