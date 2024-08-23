@@ -36,6 +36,15 @@ export const links = [
 ] as const;
 
 export const experiencesData = [
+
+{
+  title: "Full-stack Developer, SevenDot Analytics Inc.",
+  location: "Toronto, On",
+  description:
+    "As a Full-stack Developer, I lead the development of a sports betting application, implementing dynamic and interactive features using React Native and enhancing user experience. My role involves collaborating with cross-functional teams, optimizing application performance, and integrating advanced functionalities to meet user needs.",
+  icon: React.createElement(CgWorkAlt),
+  date: "2024 - Present",
+},
   {
     title: "Graduated UofT bootcamp",
     location: "Toronto, On",
@@ -54,7 +63,7 @@ export const experiencesData = [
     date: "2021 - 2023",
   },
   {
-    title: "Software Engineer, Transneft",
+    title: "Software Developer, Transneft",
     location: "Kazan, Russia",
     description:
       "Led the development of a pipeline leak detection and localization system, effectively preventing emergency spills and thefts of oil and oil products",
