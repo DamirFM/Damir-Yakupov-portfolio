@@ -4,6 +4,7 @@ import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
 import bookShelf from "@/public/bookShelf.png";
 import fruitWave from "@/public/fruitWave.png";
+import collection from "@/public/collection.png";
 import vulcan from "@/public/vulcan.png";
 
 
@@ -82,12 +83,20 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Vulcan's Computer Emporium",
+    title: "Dream Collection",
     description:
-      "An ecommerce storefront. The store's niche is selling high end computer equipment to consumers.",
-    tags:["MongoDB","Express", "React", "Node.js", "Chakra UI"],
-    imageUrl: vulcan,
-    link: "https://github.com/DamirFM/Vulcan-s-Computer-Emporium"
+      "Next.js platform enables users to create galleries, interact with a community of creators, and explore unique, inspiring content.",
+    tags: ["Next.js", "TypeScript", "AWS S3", "MongoDB", "Tailwind", "Node.js"],
+    imageUrl: collection,
+    link: "https://github.com/DamirFM/Project-6"
+  },
+  {
+    title: "FruitWave",
+    description:
+      "Angular-based e-commerce platform that allows users to browse and purchase a variety of products.",
+    tags: ["Stripe", "TypeScript", "Angular Material", "Angular"],
+    imageUrl: fruitWave,
+    link: "https://github.com/DamirFM/FruitWave"
   },
   {
     title: "The Bookshelf",
@@ -98,12 +107,12 @@ export const projectsData = [
     link: "https://github.com/DamirFM/Bookshelf-MERN_APP"
   },
   {
-    title: "FruitWave",
+    title: "Vulcan's Computer Emporium",
     description:
-      "Angular-based e-commerce platform that allows users to browse and purchase a variety of products.",
-    tags: ["Stripe", "TypeScript", "Angular Material", "Angular"],
-    imageUrl: fruitWave,
-    link: "https://github.com/DamirFM/FruitWave"
+      "An ecommerce storefront. The store's niche is selling high end computer equipment to consumers.",
+    tags:["MongoDB","Express", "React", "Node.js", "Chakra UI"],
+    imageUrl: vulcan,
+    link: "https://github.com/DamirFM/Vulcan-s-Computer-Emporium"
   },
 
 ] as const;

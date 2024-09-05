@@ -51,26 +51,10 @@ export default function About() {
       <SectionHeading>About me</SectionHeading>
 
       <p className="mb-3">
-        After graduating with a master's degree in
-        <span className="font-medium"> Automation in Manufacturing</span>,
-        I decided to pursue my passion for programming.
-        I enrolled in
-        a <span className="underline">University of Toronto coding bootcamp</span> and learned
-        <span className="font-medium"> full-stack web development</span>.
-        <span className="italic"> My favorite part of programming</span> is
-        the problem-solving aspect. I
-        <span className="underline"> love</span> the
-        feeling of finally figuring out a solution to a problem.
-        My core stack is
-        <span className="font-medium"> MERN (MongoDB, Express.js, React.js, Node.js)</span>.
-        I possess  of TypeScript fundamentals and continually seek avenues for mastering valuable technologies.
-        Presently, I'm actively looking fo a <span className="font-medium">full-time role</span> as a software developer.
+        As a Front-End Developer at <span className="font-medium">SevenDot Analytics Inc.</span>, I focus on optimizing performance and implementing scalable features. I've reduced development time by 40% and enhanced app stability through Redux for state management and GraphQL with PostgreSQL for efficient data synchronization. I also improved mobile app performance and UI by leveraging <span className="font-medium">React Native, TypeScript, and Expo</span>, achieving a 25% boost in performance. My work emphasizes cross-platform compatibility, clean code, and thorough testing with <span className="font-medium">Jest and Mocha</span> to ensure stability.
       </p>
 
-      <p>
-        <span className="italic">During my non-coding hours</span>,
-        I find pleasure in photography, watching movies, and attending music concerts.
-      </p>
+
 
     </motion.section>
   )
