@@ -6,7 +6,7 @@ import bookShelf from "@/public/bookShelf.png";
 import fruitWave from "@/public/fruitWave.png";
 import collection from "@/public/collection.png";
 import vulcan from "@/public/vulcan.png";
-
+import seven from "@/public/seven.png";
 
 export const links = [
   {
@@ -50,7 +50,7 @@ export const experiencesData = [
     title: "Graduated UofT bootcamp",
     location: "Toronto, On",
     description:
-      "I completed an intensive 3-month program where I mastered the basics of full-stack web development. This comprehensive training equipped me to embark on my career journey as a versatile developer, proficient in both front-end and back-end development.",
+      "I completed a program where I mastered the basics of full-stack web development. This comprehensive training equipped me to embark on my career journey as a versatile developer, proficient in both front-end and back-end development.",
 
     icon: React.createElement(LuGraduationCap), 
     date: "2024",
@@ -64,7 +64,7 @@ export const experiencesData = [
     date: "2021 - 2023",
   },
   {
-    title: "Software Developer, Transneft",
+    title: "Full Stack  Developer, Transneft",
     location: "Kazan, Russia",
     description:
       "Led the development of a pipeline leak detection and localization system, effectively preventing emergency spills and thefts of oil and oil products",
@@ -85,11 +85,20 @@ export const projectsData = [
   {
     title: "Dream Collection",
     description:
-      "Next.js platform enables users to create galleries, interact with a community of creators, and explore unique, inspiring content.",
+      "Next.js platform enables users to create galleries, interact with a community of creators, and explore content.",
     tags: ["Next.js", "TypeScript", "AWS S3", "MongoDB", "Tailwind", "Node.js"],
     imageUrl: collection,
     link: "https://github.com/DamirFM/Project-6"
   },
+  {
+    title: "SevenDot Analytics Inc.",
+    description:
+      "Alter the gambling landscape through research and education.",
+    tags: ["React Native", "Python", "PostgreSQL", "Node.js", "Jest"],
+    imageUrl: seven,
+    link: "https://www.linkedin.com/company/sevendot-analytics-inc/about/"
+  }
+  ,
   {
     title: "FruitWave",
     description:
@@ -118,6 +127,7 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
+  "Next.js",
   "MongoDB",
   "Express",
   "React",
@@ -127,7 +137,15 @@ export const skillsData = [
   "CSS",
   "JavaScript",
   "TypeScript",
-  "Next.js",
+  "AWS",
+  "Stripe",
+  "Jest",
+  "Chakra UI",
+  "Python",
+  "PostgreSQL",
+  "Docker",
+  "Expo",
+  "Xcode",
   "Git",
   "Tailwind",
   "Bootstrap",

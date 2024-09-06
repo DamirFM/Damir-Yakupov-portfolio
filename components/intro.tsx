@@ -79,7 +79,7 @@ export default function Intro() {
                 </div>
             </div>
             <motion.h1
-                className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl dark:text-gray-300"
+                className="mb-10 mt-4 px-4 text-xl font-medium !leading-[1.5] sm:text-4xl dark:text-gray-300"
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
@@ -87,9 +87,9 @@ export default function Intro() {
                     duration: 0.3,
                 }}
             >
-                <span className="font-bold">Hello, I'm Damir.</span> I'm a{" "}
-                <span className="font-bold">full-stack developer</span> with 4+ years of experience
-                <span className="font-italic">  in designing and developing accessible, user-friendly web applications with </span>
+                <span className="font-bold">Hi 👋, I'm Damir</span> {" "}
+                <span className="italic">a full-stack developer</span> with 4+ years of experience
+                <span className="font-">  in designing and developing accessible, user-friendly web applications with </span>
 
                 <span className="font-bold"> React, Express, Node.js, and MongoDB. </span>
                 I've
