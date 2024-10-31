@@ -87,7 +87,7 @@ export const projectsData = [
     title: "Odds Pulse",
     description:
       "A sports analytics platform providing real-time NFL betting line movements, player props, and interactive trends. ",
-    tags: ["React Native", "Expo", "Google Auth", "AWS S3", "TypeScript"],
+    tags: ["React Native", "Expo", "AWS S3", "TypeScript"],
     imageUrl: oddsPulse,
     link: "https://apps.apple.com/us/app/odds-pulse/id6736870855?platform=iphone"
   },
