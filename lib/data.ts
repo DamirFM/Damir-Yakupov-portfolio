@@ -7,6 +7,7 @@ import fruitWave from "@/public/fruitWave.png";
 import collection from "@/public/collection.png";
 import vulcan from "@/public/vulcan.png";
 import seven from "@/public/seven.png";
+import oddsPulse from "@/public/oddsPulse.png";
 
 export const links = [
   {
@@ -82,6 +83,14 @@ export const experiencesData = [
 ] as const;
 
 export const projectsData = [
+  {
+    title: "Odds Pulse",
+    description:
+      "A sports analytics platform providing real-time NFL betting line movements, player props, and interactive trends. Users track live odds, save events, and access customizable features for enhanced market insights.",
+    tags: ["React Native", "Expo", "Google Auth", "AWS S3", "TypeScript"],
+    imageUrl: oddsPulse,
+    link: "https://apps.apple.com/us/app/odds-pulse/id6736870855?platform=iphone"
+  },
   {
     title: "Dream Collection",
     description:
