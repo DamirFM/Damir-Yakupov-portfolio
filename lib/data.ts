@@ -94,8 +94,8 @@ export const projectsData = [
   {
     title: "Dream Collection",
     description:
-      "Next.js platform enables users to create galleries, interact with a community of creators, and explore content.",
-    tags: ["Next.js", "TypeScript", "AWS S3", "MongoDB", "Tailwind", "Node.js"],
+      "Next.js platform enables users to create galleries and explore content.",
+    tags: ["Next.js", "TypeScript", "AWS S3", "Tailwind"],
     imageUrl: collection,
     link: "https://github.com/DamirFM/Project-6"
   },
