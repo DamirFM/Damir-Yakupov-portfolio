@@ -8,6 +8,7 @@ import collection from "@/public/collection.png";
 import vulcan from "@/public/vulcan.png";
 import seven from "@/public/seven.png";
 import oddsPulse from "@/public/oddsPulse.png";
+import aiChatBotImage from "@/public/aiChatBotImage.png";
 
 export const links = [
   {
@@ -38,6 +39,14 @@ export const links = [
 ] as const;
 
 export const experiencesData = [
+  {
+    title: "AI Chat Bot App 🤖💬",
+    description:
+      "A simple AI-powered chat application built with Next.js and OpenAI's GPT-4-turbo model.",
+    tags: ["Next.js", "OpenAI GPT-4", "Tailwind CSS"],
+    imageUrl: aiChatBotImage, // Replace with the actual image variable you have
+    link: "https://ai-chat-bot-ivory-ten.vercel.app",
+  },
 
 {
   title: "Full-stack Developer, SevenDot Analytics Inc.",
