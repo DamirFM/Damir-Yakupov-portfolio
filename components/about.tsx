@@ -6,7 +6,7 @@ import SectionHeading from "./section-heading";
 
 import { useSectionInView } from '@/lib/hooks';
 
-
+// test
 export default function About() {
 
   const { ref } = useSectionInView("About")
